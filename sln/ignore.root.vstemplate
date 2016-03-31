@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+    <TemplateData>
+        <Name>DnxSample</Name>
+        <Description>Sample  Module</Description>
+        <Icon>main.ico</Icon>
+        <ProjectType>DNX</ProjectType>
+    </TemplateData>
+    <TemplateContent>
+    </TemplateContent>
+    <WizardExtension>
+      <Assembly>Template.Wizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=83405d10b41e5b99, processorArchitecture=MSIL</Assembly>
+      <FullClassName>Template.Wizards.RootWizard</FullClassName>
+    </WizardExtension>
+</VSTemplate>

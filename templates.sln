@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E015EE50-079D-45E8-89EB-0B970193E2E3}"
+	ProjectSection(SolutionItems) = preProject
+		readme.txt = readme.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wizards", "sln\Wizards\src\Wizards\Wizards.csproj", "{87D537E2-ED19-442D-8FC7-7E17B0D424BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "templates", "sln\templates.csproj", "{9BB6F5B9-D6D7-4F6F-8CA7-AA5F563B45AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87D537E2-ED19-442D-8FC7-7E17B0D424BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D537E2-ED19-442D-8FC7-7E17B0D424BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D537E2-ED19-442D-8FC7-7E17B0D424BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D537E2-ED19-442D-8FC7-7E17B0D424BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BB6F5B9-D6D7-4F6F-8CA7-AA5F563B45AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB6F5B9-D6D7-4F6F-8CA7-AA5F563B45AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB6F5B9-D6D7-4F6F-8CA7-AA5F563B45AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB6F5B9-D6D7-4F6F-8CA7-AA5F563B45AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

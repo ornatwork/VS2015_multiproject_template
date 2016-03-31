@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+    <TemplateData>
+        <Name>$safeprojectname$</Name>
+        <Description>Sample Module</Description>
+        <Icon>main.ico</Icon>
+        <ProjectType>DNX</ProjectType>
+    </TemplateData>
+    <TemplateContent>
+      <ProjectCollection>
+            <!-- 
+            The root project does not get it's own solution folder.
+            This way it's easier to remove it after the solution has been built.
+            -->
+            <ProjectTemplateLink ProjectName="tmp_root">
+              tmp_root\tmp_root.vstemplate
+            </ProjectTemplateLink>
+            <SolutionFolder Name="src" CreateOnDisk="true" >
+                <ProjectTemplateLink ProjectName="$safeprojectname$">
+                  src\SampleModule.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+            <SolutionFolder Name="test" CreateOnDisk="true" >
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Test" >
+                  test\SampleModule.Test.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+        </ProjectCollection>
+    </TemplateContent>
+    <WizardExtension>
+      <Assembly>Template.Wizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=83405d10b41e5b99, processorArchitecture=MSIL</Assembly>
+      <FullClassName>Template.Wizards.RootWizard</FullClassName>
+    </WizardExtension>
+</VSTemplate>

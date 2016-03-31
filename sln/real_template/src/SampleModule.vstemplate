@@ -1,0 +1,43 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>$safeprojectname$</Name>
+    <Description>Sample service</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Web</ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
+    <CreateInPlace>true</CreateInPlace>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>$safeprojectname$</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="SampleService.xproj" File="SampleModule.xproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="false" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
+      </Folder>
+      <Folder Name="wwwroot" TargetFolderName="wwwroot">
+        <ProjectItem ReplaceParameters="true" TargetFileName="web.config">web.config</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ValuesController.cs">ValuesController.cs</ProjectItem>
+      </Folder>
+      <Folder Name="some" TargetFolderName="some">
+        <Folder Name="Core" TargetFolderName="Core">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ServiceDefinition.cs">ServiceDefinition.cs</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="project.json">project.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Startup.cs">Startup.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Template.Wizards, Version=1.0.0.0, Culture=neutral, PublicKeyToken=83405d10b41e5b99, processorArchitecture=MSIL</Assembly>
+    <FullClassName>Template.Wizards.ChildWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

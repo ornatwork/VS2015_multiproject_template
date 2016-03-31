@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SampleModule", "src\SampleModule.xproj", "{1B925BCF-1AD5-46DD-ADE8-3761E002F3A4}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SampleModule.Spec", "test\SampleModule.Spec.xproj", "{B94A1F37-0399-4AB5-9511-9DD79F81B460}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B925BCF-1AD5-46DD-ADE8-3761E002F3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B925BCF-1AD5-46DD-ADE8-3761E002F3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B925BCF-1AD5-46DD-ADE8-3761E002F3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B925BCF-1AD5-46DD-ADE8-3761E002F3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B94A1F37-0399-4AB5-9511-9DD79F81B460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B94A1F37-0399-4AB5-9511-9DD79F81B460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B94A1F37-0399-4AB5-9511-9DD79F81B460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B94A1F37-0399-4AB5-9511-9DD79F81B460}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

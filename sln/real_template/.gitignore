@@ -1,0 +1,10 @@
+﻿*.vssscc
+*.xproj.user
+/**/*.pre-normalize
+*.suo
+/.vs
+/src/SampleService/bin
+/test/SampleService.Spec/bin
+project.lock.json
+/misc/**/obj/Debug
+/misc/**/obj/Release

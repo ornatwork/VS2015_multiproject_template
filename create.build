@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+  Packages the  Sample Template 
+-->
+<project name="pack" default="doit">
+  <!-- Variables -->
+	<property name="root.dir" value="${directory::get-current-directory()}" overwrite="false" />
+	<property name="solution.dir" value="${root.dir}\sln\" overwrite="false" />
+  <property name="result.file" value="Template.zip" overwrite="false"  />
+  <property name="wizard.file" value="${solution.dir}Wizards\bin\Debug\Template.Wizards.dll" overwrite="false"  />
+  <property name="user.dir" value="${environment::get-variable('USERPROFILE')}" />
+  <readregistry property="gacutil.dir" key="Software\Microsoft\Microsoft SDKs\Windows\CurrentInstallFolder" hive="LocalMachine" />
+  
+  <!-- Uses zip to package the template  -->
+  <target name="doit">
+    <echo message="Packaging template..." />
+    <echo message="result.file=${result.file}" />
+    <echo message="..." />
+    <echo message="... gacutil dir=${gacutil.dir}" />
+    
+		<zip zipfile="${result.file}" includeemptydirs="true" verbose="true" >
+	    <fileset basedir="${solution.dir}">
+          <exclude name="${solution.dir}bin/**" />
+          <exclude name="${solution.dir}obj/**" />
+          <exclude name="${solution.dir}Properties/**" />
+          <exclude name="${solution.dir}Wizards/**" />
+          <exclude name="${solution.dir}Installer_VSIX/**" />
+          <include name="**/*" />
+      </fileset>
+		</zip>
+		
+		<!-- Then copy to template location -->
+    <echo message="" />
+    <echo message="... Copying template" />
+		<copy file="${result.file}" tofile="${user.dir}\Documents\Visual Studio 2015\Templates\ProjectTemplates\${result.file}" />
+
+    <!-- Make sure the latest version of the wizard is registered 
+    <echo message="" />
+    <echo message="... Registering template wizard, at=&quot;sln\Wizards\src\Wizards\bin\Debug\Template.Wizards.dll&quot;" />
+    <exec program="${gacutil.dir}bin\NETFX 4.5.1 Tools\x64\gacutil.exe">
+      <arg value="-u &quot;Template.Wizards&quot;" />
+    </exec>
+
+    <exec program="${gacutil.dir}bin\NETFX 4.5.1 Tools\x64\gacutil.exe">
+      <arg value="-i &quot;${wizard.file}&quot;" />
+    </exec>
+    -->
+    <exec program="${gacutil.dir}bin\NETFX 4.5.1 Tools\x64\gacutil.exe">
+      <arg value="-l &quot;Template.Wizards&quot;" />
+    </exec>
+  </target>
+
+</project>
